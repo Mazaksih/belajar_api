@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Kegiatan {% endblock title %} 
+{% block content %}
+
+<h1>List Kegiatan</h1>
+<u1>
+    {% for todo in todos %}
+    <li>
+        {{todo.title}}:
+        {% if todo.completed %} Selesai {% else %}Belum selesai{% endif %}
+    </li>
+    {% endfor %}
+</u1>
+
+{% endblock content %} 
